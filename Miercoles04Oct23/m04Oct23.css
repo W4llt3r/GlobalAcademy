@@ -1,0 +1,98 @@
+/*podemos indicar ELEMENTOS dentro de un CONTENEDOR, 
+usando la CASCADA*/
+.grid > div {
+    background-color: yellow;
+    text-align: center;
+    font-size: 3vw;
+    border: 1px solid black;
+    padding: 10px;
+}
+/* .grid{
+    background-color: green;
+    display: grid;
+    /*Tenemos dos elementos muy importantes para el DISPLAY*/
+    /*grid-template-columns: TAMAÑO y CANTIDAD DE COLUMNAS*/
+    /*grid-template-rows: TAMAÑO y CANTIDAD DE FILAS*/
+    /*grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px 150px;
+} */
+/* .grid{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(3,200px);
+} */
+
+.grid{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 100px 2fr 1fr 200px;
+    /* grid-template-rows: repeat(3,200px); */ 
+    /*grid-auto-flow: row; */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gridweb{
+    /*1er CASO*/
+    display: grid;
+    background-color: aqua;
+    height: 70vh;
+    margin-top: 5px;
+    grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+    grid-template-columns: 20% 1fr 10%;
+    grid-template-rows: 25% 1fr 10%;
+    gap: 1%;
+
+    /*2do caso*/
+    /* display: grid;
+    background-color: aqua;
+    height: 70vh;
+    margin-top: 5px;
+    grid-template-areas: 
+    "header header "
+    "nav nav"
+    "main aside"
+    "footer footer";
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 20% 5% 1fr 10%;
+    gap: 1%; */
+
+    /*3do caso*/
+    /* display: grid;
+    background-color: aqua;
+    height: 70vh;
+    margin-top: 5px;
+    grid-template-areas: 
+    "nav header header "
+    "main main aside"
+    "footer footer aside";
+    grid-template-columns: 15% 1fr 25%;
+    grid-template-rows: 30% 1fr 10%;
+    gap: 1%; */
+}
+
+.gridweb > * {
+    background-color: rgb(0,255,81);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+}
+
+.header{
+    grid-area: header;
+}
+.navbar{
+    grid-area: nav;
+}
+.main{
+    grid-area: main;
+}
+.aside{
+    grid-area: aside;
+}
+.footer{
+    grid-area: footer;
+}
