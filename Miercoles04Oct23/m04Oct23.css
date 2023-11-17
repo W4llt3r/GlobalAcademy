@@ -1,7 +1,7 @@
 /*podemos indicar ELEMENTOS dentro de un CONTENEDOR, 
 usando la CASCADA*/
 .grid > div {
-    background-color: yellow;
+    background-color: red;
     text-align: center;
     font-size: 3vw;
     border: 1px solid black;
